@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\Mes jeux\\Unreal\\_GitHub\\Nimbus-Miner\\Nimbus_Miner\\Source\\Nimbus_Miner\\Nimbus_Miner.Build.cs",
+		"C:\\Mes jeux\\Unreal\\_GitHub\\Nimbus-Miner\\Nimbus_Miner\\Source\\Nimbus_Miner.Target.cs",
+		"C:\\Mes jeux\\Unreal\\_GitHub\\Nimbus-Miner\\Nimbus_Miner\\Source\\Nimbus_MinerEditor.Target.cs"
+	],
+	"EngineVersion": "5.3.2"
+}

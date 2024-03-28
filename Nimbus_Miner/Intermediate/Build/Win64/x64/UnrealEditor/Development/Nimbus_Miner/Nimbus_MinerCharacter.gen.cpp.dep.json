@@ -1,0 +1,23 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\mes jeux\\unreal\\_github\\nimbus-miner\\nimbus_miner\\intermediate\\build\\win64\\unrealeditor\\inc\\nimbus_miner\\uht\\nimbus_minercharacter.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\mes jeux\\unreal\\_github\\nimbus-miner\\nimbus_miner\\intermediate\\build\\win64\\x64\\nimbus_minereditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\mes jeux\\unreal\\_github\\nimbus-miner\\nimbus_miner\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\nimbus_miner\\definitions.nimbus_miner.h",
+            "c:\\mes jeux\\unreal\\_github\\nimbus-miner\\nimbus_miner\\source\\nimbus_miner\\nimbus_minercharacter.h",
+            "c:\\unreal engine\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "c:\\unreal engine\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "c:\\unreal engine\\ue_5.3\\engine\\source\\runtime\\experimental\\iris\\core\\public\\iris\\serialization\\irisobjectreferencepackagemap.h",
+            "c:\\unreal engine\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\iriscore\\uht\\irisobjectreferencepackagemap.generated.h",
+            "c:\\unreal engine\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementreplication.generated.h",
+            "c:\\unreal engine\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "c:\\unreal engine\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
+            "c:\\unreal engine\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
+            "c:\\mes jeux\\unreal\\_github\\nimbus-miner\\nimbus_miner\\intermediate\\build\\win64\\unrealeditor\\inc\\nimbus_miner\\uht\\nimbus_minercharacter.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

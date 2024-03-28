@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Nimbus_Miner",
+			"Path": "..\\Source\\Nimbus_Miner.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "Nimbus_MinerEditor",
+			"Path": "..\\Source\\Nimbus_MinerEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
