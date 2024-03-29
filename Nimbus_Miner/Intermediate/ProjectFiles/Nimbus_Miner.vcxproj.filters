@@ -11,6 +11,8 @@
     <None Include="..\..\Source\Nimbus_MinerEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.editorconfig" />
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -76,6 +78,42 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\Nimbus_Miner\TP_WeaponComponent.h">
       <Filter>Source\Nimbus_Miner</Filter>
+    </ClInclude>
+    <Filter Include="Source\Nimbus_Miner\Private">
+      <UniqueIdentifier>{684900CA-0571-38D0-802D-EDDCD054EE35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Nimbus_Miner\Private\Environment">
+      <UniqueIdentifier>{3EF173B9-25AC-3839-85A4-FD50457DF4E8}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Nimbus_Miner\Private\Environment\EnvironmentEnums.h">
+      <Filter>Source\Nimbus_Miner\Private\Environment</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Nimbus_Miner\Private\Environment\EnvironmentManager.cpp">
+      <Filter>Source\Nimbus_Miner\Private\Environment</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Nimbus_Miner\Private\Environment\EnvironmentManager.h">
+      <Filter>Source\Nimbus_Miner\Private\Environment</Filter>
+    </ClInclude>
+    <Filter Include="Source\Nimbus_Miner\Private\Environment\BasicChunk">
+      <UniqueIdentifier>{BD659057-F241-3C5C-BBB6-A0EBD4C69875}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Nimbus_Miner\Private\Environment\BasicChunk\BasicChunk.cpp">
+      <Filter>Source\Nimbus_Miner\Private\Environment\BasicChunk</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Nimbus_Miner\Private\Environment\BasicChunk\BasicChunk.h">
+      <Filter>Source\Nimbus_Miner\Private\Environment\BasicChunk</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Nimbus_Miner\Private\Environment\BasicChunk\Chunk.cpp">
+      <Filter>Source\Nimbus_Miner\Private\Environment\BasicChunk</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Nimbus_Miner\Private\Environment\BasicChunk\Chunk.h">
+      <Filter>Source\Nimbus_Miner\Private\Environment\BasicChunk</Filter>
+    </ClInclude>
+    <Filter Include="Source\Nimbus_Miner\Private\Environment\ExternalAssets">
+      <UniqueIdentifier>{831AE5D4-6AC3-3D61-8BF6-61DE2E6E1C08}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Nimbus_Miner\Private\Environment\ExternalAssets\FastNoiseLite.h">
+      <Filter>Source\Nimbus_Miner\Private\Environment\ExternalAssets</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

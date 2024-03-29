@@ -1,6 +1,7 @@
 /I "."
-/I "C:\Mes jeux\Unreal\_GitHub\Nimbus-Miner\Nimbus_Miner\Intermediate\Build\Win64\UnrealEditor\Inc\Nimbus_Miner\UHT"
-/I "C:\Mes jeux\Unreal\_GitHub\Nimbus-Miner\Nimbus_Miner\Source"
+/I "C:\Mes jeux\Unreal\_GitHub\Nimbus-Miner\Nimbus_Miner\Source\Nimbus_Miner\Private"
+/I "..\Plugins\Runtime\ProceduralMeshComponent\Intermediate\Build\Win64\UnrealEditor\Inc\ProceduralMeshComponent\UHT"
+/I "..\Plugins\Runtime\ProceduralMeshComponent\Source\ProceduralMeshComponent\Public"
 /I "Runtime\Core\Public"
 /I "Runtime\Core\Internal"
 /I "Runtime\TraceLog\Public"
@@ -258,6 +259,8 @@
 /I "Developer\PhysicsUtilities\Public"
 /I "..\Intermediate\Build\Win64\UnrealEditor\Inc\WidgetRegistration\UHT"
 /I "Developer\WidgetRegistration\Public"
+/I "C:\Mes jeux\Unreal\_GitHub\Nimbus-Miner\Nimbus_Miner\Intermediate\Build\Win64\UnrealEditor\Inc\Nimbus_Miner\UHT"
+/I "C:\Mes jeux\Unreal\_GitHub\Nimbus-Miner\Nimbus_Miner\Source"
 /I "..\Plugins\EnhancedInput\Intermediate\Build\Win64\UnrealEditor\Inc\EnhancedInput\UHT"
 /I "..\Plugins\EnhancedInput\Source\EnhancedInput\Public"
 /external:W0
