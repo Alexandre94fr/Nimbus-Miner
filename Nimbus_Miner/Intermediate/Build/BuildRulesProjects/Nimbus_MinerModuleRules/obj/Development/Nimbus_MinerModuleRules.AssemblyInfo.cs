@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Nimbus_MinerModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f8f217d8528db82fc5b15c8030f0882a81a8c4b6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+885a12c099bbf203e5685f1c2bda6aa477a34bfe")]
 [assembly: System.Reflection.AssemblyProductAttribute("Nimbus_MinerModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Nimbus_MinerModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
