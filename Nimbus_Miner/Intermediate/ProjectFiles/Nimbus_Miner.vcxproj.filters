@@ -103,17 +103,20 @@
     <ClInclude Include="..\..\Source\Nimbus_Miner\Private\Environment\BasicChunk\BasicChunk.h">
       <Filter>Source\Nimbus_Miner\Private\Environment\BasicChunk</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Nimbus_Miner\Private\Environment\BasicChunk\Chunk.cpp">
-      <Filter>Source\Nimbus_Miner\Private\Environment\BasicChunk</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Nimbus_Miner\Private\Environment\BasicChunk\Chunk.h">
-      <Filter>Source\Nimbus_Miner\Private\Environment\BasicChunk</Filter>
-    </ClInclude>
     <Filter Include="Source\Nimbus_Miner\Private\Environment\ExternalAssets">
       <UniqueIdentifier>{831AE5D4-6AC3-3D61-8BF6-61DE2E6E1C08}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\Nimbus_Miner\Private\Environment\ExternalAssets\FastNoiseLite.h">
       <Filter>Source\Nimbus_Miner\Private\Environment\ExternalAssets</Filter>
+    </ClInclude>
+    <Filter Include="Source\Nimbus_Miner\Private\Environment\GreedyChunk">
+      <UniqueIdentifier>{7C72830B-3003-37FC-9A26-60F35F037870}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Nimbus_Miner\Private\Environment\GreedyChunk\GreedyChunk.cpp">
+      <Filter>Source\Nimbus_Miner\Private\Environment\GreedyChunk</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Nimbus_Miner\Private\Environment\GreedyChunk\GreedyChunk.h">
+      <Filter>Source\Nimbus_Miner\Private\Environment\GreedyChunk</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
