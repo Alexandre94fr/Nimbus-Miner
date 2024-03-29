@@ -14,8 +14,6 @@ void AEnvironmentManager::BeginPlay()
 {
 	Super::BeginPlay();
 
-	_selfActor = this;
-
 	// We spawn all start chunks 
 	for (int x = -DrawDistance; x <= DrawDistance; x++) 
 	{
@@ -26,11 +24,11 @@ void AEnvironmentManager::BeginPlay()
 			// We create the chunk and store his adress
 			AActor* newChunk = GetWorld()->SpawnActor<AActor>(TypeOfChunkLoaded, FVector(x * ChunksSize * 100, y * ChunksSize * 100, 0), FRotator::ZeroRotator);
 
-			// We set the parent of the created chunks to the chunk parent
-			if (newChunk && _selfActor)
+			// We set the parent of the created chunks to the chunk parent (The EnvironmentManager needs a component to have childrens)
+			if (newChunk && this)
 			{
-				newChunk->AttachToActor(_selfActor, FAttachmentTransformRules::KeepWorldTransform);
-			}		
+				newChunk->AttachToActor(this, FAttachmentTransformRules::KeepWorldTransform);
+			}
 		}
 	}
 }
