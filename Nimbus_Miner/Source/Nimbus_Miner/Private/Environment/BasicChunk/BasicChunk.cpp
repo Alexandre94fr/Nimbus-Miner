@@ -42,7 +42,7 @@ void ABasicChunk::GenerateBlocks()
 {
 	FVector chunkLocation = GetActorLocation();
 
-	// NOTE : Remember than Unreal Engine invert Y and Z axis, so Z is top to button axis
+	// NOTE : Remember than Unreal Engine invert Y and Z axis, so Z is button to top axis
 
 	for (int x = 0; x < Size; x++)
 	{
