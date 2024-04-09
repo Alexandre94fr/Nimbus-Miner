@@ -34,9 +34,9 @@ void EmptyLinkFunctionForGeneratedCodeGreedyChunk() {}
 #endif
 		static const UECodeGen_Private::FIntPropertyParams NewProp_WorldSeed;
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_Frequency_MetaData[];
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_NoiseFrequency_MetaData[];
 #endif
-		static const UECodeGen_Private::FFloatPropertyParams NewProp_Frequency;
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_NoiseFrequency;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_Size_MetaData[];
 #endif
@@ -67,7 +67,7 @@ void EmptyLinkFunctionForGeneratedCodeGreedyChunk() {}
 #endif
 	const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AGreedyChunk_Statics::NewProp_WorldSeed = { "WorldSeed", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGreedyChunk, WorldSeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGreedyChunk_Statics::NewProp_WorldSeed_MetaData), Z_Construct_UClass_AGreedyChunk_Statics::NewProp_WorldSeed_MetaData) };
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGreedyChunk_Statics::NewProp_Frequency_MetaData[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGreedyChunk_Statics::NewProp_NoiseFrequency_MetaData[] = {
 		{ "Category", "ChunkStats" },
 		{ "ModuleRelativePath", "Private/Environment/GreedyChunk/GreedyChunk.h" },
 #if !UE_BUILD_SHIPPING
@@ -75,7 +75,7 @@ void EmptyLinkFunctionForGeneratedCodeGreedyChunk() {}
 #endif
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGreedyChunk_Statics::NewProp_Frequency = { "Frequency", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGreedyChunk, Frequency), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGreedyChunk_Statics::NewProp_Frequency_MetaData), Z_Construct_UClass_AGreedyChunk_Statics::NewProp_Frequency_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGreedyChunk_Statics::NewProp_NoiseFrequency = { "NoiseFrequency", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGreedyChunk, NoiseFrequency), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGreedyChunk_Statics::NewProp_NoiseFrequency_MetaData), Z_Construct_UClass_AGreedyChunk_Statics::NewProp_NoiseFrequency_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGreedyChunk_Statics::NewProp_Size_MetaData[] = {
 		{ "Category", "Chunk" },
@@ -91,7 +91,7 @@ void EmptyLinkFunctionForGeneratedCodeGreedyChunk() {}
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AGreedyChunk_Statics::NewProp_Size = { "Size", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGreedyChunk, Size), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGreedyChunk_Statics::NewProp_Size_MetaData), Z_Construct_UClass_AGreedyChunk_Statics::NewProp_Size_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGreedyChunk_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGreedyChunk_Statics::NewProp_WorldSeed,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGreedyChunk_Statics::NewProp_Frequency,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGreedyChunk_Statics::NewProp_NoiseFrequency,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGreedyChunk_Statics::NewProp_Size,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AGreedyChunk_Statics::StaticCppClassTypeInfo = {
@@ -132,9 +132,9 @@ void EmptyLinkFunctionForGeneratedCodeGreedyChunk() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_GreedyChunk_GreedyChunk_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AGreedyChunk, AGreedyChunk::StaticClass, TEXT("AGreedyChunk"), &Z_Registration_Info_UClass_AGreedyChunk, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGreedyChunk), 2456172673U) },
+		{ Z_Construct_UClass_AGreedyChunk, AGreedyChunk::StaticClass, TEXT("AGreedyChunk"), &Z_Registration_Info_UClass_AGreedyChunk, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGreedyChunk), 725436722U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_GreedyChunk_GreedyChunk_h_2013473027(TEXT("/Script/Nimbus_Miner"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_GreedyChunk_GreedyChunk_h_2862793904(TEXT("/Script/Nimbus_Miner"),
 		Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_GreedyChunk_GreedyChunk_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_GreedyChunk_GreedyChunk_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

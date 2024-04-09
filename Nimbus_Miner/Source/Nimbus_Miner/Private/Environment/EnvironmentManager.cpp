@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "Environment/EnvironmentManager.h"
+#include "GreedyChunk/GreedyChunk.h"
 
 // Sets default values
 AEnvironmentManager::AEnvironmentManager()
@@ -28,6 +29,16 @@ void AEnvironmentManager::BeginPlay()
 			if (newChunk && this)
 			{
 				newChunk->AttachToActor(this, FAttachmentTransformRules::KeepWorldTransform);
+
+				// We are getting the chunk's class
+				AGreedyChunk* chunkClass = Cast<AGreedyChunk>(newChunk);
+				if (chunkClass)
+				{
+					// Access and change the public variables
+					chunkClass->WorldSeed = WorldSeed;
+					chunkClass->NoiseFrequency = NoiseFrequency;
+					chunkClass->InitGreedyChunk();
+				}
 			}
 		}
 	}

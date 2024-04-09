@@ -14,10 +14,21 @@ AGreedyChunk::AGreedyChunk()
 
 	// Initialisation of the private variables
 	_mesh = CreateDefaultSubobject<UProceduralMeshComponent>("Mesh");
+}
 
+// Called when the game starts or when spawned
+void AGreedyChunk::BeginPlay()
+{
+	Super::BeginPlay();
+
+
+}
+
+void AGreedyChunk::InitGreedyChunk()
+{
 	// Creating the noise
 	_noise = new FastNoiseLite(WorldSeed);
-	_noise->SetFrequency(Frequency);
+	_noise->SetFrequency(NoiseFrequency);
 	_noise->SetNoiseType(FastNoiseLite::NoiseType_Perlin);
 	_noise->SetFractalType(FastNoiseLite::FractalType_FBm);
 
@@ -27,13 +38,7 @@ AGreedyChunk::AGreedyChunk()
 	_mesh->SetCastShadow(false);
 
 	SetRootComponent(_mesh);
-}
 
-// Called when the game starts or when spawned
-void AGreedyChunk::BeginPlay()
-{
-	Super::BeginPlay();
-	
 	GenerateBlocks();
 
 	GenerateMesh();
@@ -56,7 +61,6 @@ void AGreedyChunk::GenerateBlocks()
 			const float xPosition = (x * 100 + chunkLocation.X) / 100;
 			const float yPosition = (y * 100 + chunkLocation.Y) / 100;
 
-			//const int height = FMath::Clamp(FMath::RoundToInt((_noise->GetNoise(xPosition, yPosition) + 1) * Size / 2), 0, Size);
 			const int height = FMath::Clamp(FMath::RoundToInt((_noise->GetNoise(xPosition, yPosition) + 1) * Size.Z / 2), 0, Size.Z);
 
 			// All the blocks under and at the height became clouds
@@ -95,8 +99,8 @@ void AGreedyChunk::GenerateMesh()
 	{
 		// Setting up locals variables
 
-		const int axis1 = (axis + 1) % 3; // Return the X axis
-		const int axis2 = (axis + 2) % 3; // Return the Y axis
+		const int axis1 = (axis + 1) % 3; // Return the horizontal axis
+		const int axis2 = (axis + 2) % 3; // Return the vertical axis
 
 		const int mainAxisLimit = Size[axis];
 		int axis1Limit = Size[axis1];

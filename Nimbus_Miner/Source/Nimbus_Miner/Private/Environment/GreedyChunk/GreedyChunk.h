@@ -32,12 +32,14 @@ public:
 	int WorldSeed = 1789;
 
 	UPROPERTY(EditAnywhere, Category = "ChunkStats", meta = (ToolTip = "The noise frequency"))
-	float Frequency = 0.03f;
+	float NoiseFrequency = 0.03f;
 
 	// Enable the posibility to set the chunk's size to not be like a scare
 
 	UPROPERTY(EditAnywhere, Category = "Chunk")
 	FIntVector Size = FIntVector(1, 1, 1) * 32;
+
+	void InitGreedyChunk();
 
 protected:
 
