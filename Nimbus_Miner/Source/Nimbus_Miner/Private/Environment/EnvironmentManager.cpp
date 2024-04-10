@@ -30,15 +30,15 @@ void AEnvironmentManager::RandomizeWorldStats()
 
 void AEnvironmentManager::CreateAllStartingChunks()
 {
-	// We spawn all start chunks 
-	for (int x = -DrawDistance; x <= DrawDistance; x++)
+	// Safety first
+	if (IsValid(TypeOfChunkLoaded))
 	{
-		for (int y = -DrawDistance; y <= DrawDistance; y++)
+		// We spawn all starting chunks 
+		for (int x = -DrawDistance; x <= DrawDistance; x++)
 		{
-			// Safety
-			if (IsValid(TypeOfChunkLoaded))
+			for (int y = -DrawDistance; y <= DrawDistance; y++)
 			{
-				// The hard coded 100 number is there because Unreal Engine use centimeter has mesure unit, so to have meter we multiply/divide everything by 100
+				// NOTE : The hard coded 100 number is there because Unreal Engine use centimeter has mesure unit, so to have meter we multiply/divide everything by 100
 
 				// We create the chunk and store his adress
 				AActor* newChunk = GetWorld()->SpawnActor<AActor>(TypeOfChunkLoaded, FVector(x * ChunksSize.X * 100, y * ChunksSize.Y * 100, 0), FRotator::ZeroRotator);
@@ -60,11 +60,11 @@ void AEnvironmentManager::CreateAllStartingChunks()
 					}
 				}
 			}
-			else
-			{
-				GEngine->AddOnScreenDebugMessage(-1, 25.0f, FColor::Red, FString::Printf(TEXT("TypeOfChunkLoaded is null")), true, FVector2D(2, 2));
-				return;
-			}
 		}
+	}
+	else
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 25.0f, FColor::Red, FString::Printf(TEXT("TypeOfChunkLoaded is null")), true, FVector2D(2, 2));
+		return;
 	}
 }
