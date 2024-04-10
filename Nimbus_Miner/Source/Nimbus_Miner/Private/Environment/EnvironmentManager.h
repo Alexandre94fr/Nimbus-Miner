@@ -16,7 +16,10 @@ public:
 	// Sets default values for this actor's properties
 	AEnvironmentManager();
 
-	UPROPERTY(EditAnywhere, Category = "WorldStats", meta = (ToolTip = "The world seed, changing it change how the wolrd is generated"))
+	UPROPERTY(EditAnywhere, Category = "WorldStats", meta = (ToolTip = "If set to true the world generated will be different each time you launch the game, otherwise you will can set a custom seed"))
+	bool IsWorldSeedRandom = true;
+
+	UPROPERTY(EditAnywhere, Category = "WorldStats", meta = (ToolTip = "The world seed, changing it change how the wolrd is generated", EditCondition = "IsWorldSeedRandom == false", EditConditionHides))
 	int WorldSeed = 1789;
 
 	UPROPERTY(EditAnywhere, Category = "WorldStats", meta = (ToolTip = "The noise frequency"))
@@ -35,4 +38,10 @@ protected:
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+private:
+
+	void RandomizeWorldStats();
+
+	void CreateAllStartingChunks();
 };

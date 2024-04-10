@@ -31,6 +31,11 @@ void EmptyLinkFunctionForGeneratedCodeEnvironmentManager() {}
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_IsWorldSeedRandom_MetaData[];
+#endif
+		static void NewProp_IsWorldSeedRandom_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_IsWorldSeedRandom;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_WorldSeed_MetaData[];
 #endif
 		static const UECodeGen_Private::FIntPropertyParams NewProp_WorldSeed;
@@ -66,8 +71,24 @@ void EmptyLinkFunctionForGeneratedCodeEnvironmentManager() {}
 	};
 #endif
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnvironmentManager_Statics::NewProp_IsWorldSeedRandom_MetaData[] = {
+		{ "Category", "WorldStats" },
+		{ "ModuleRelativePath", "Private/Environment/EnvironmentManager.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "If set to true the world generated will be different each time you launch the game, otherwise you will can set a custom seed" },
+#endif
+	};
+#endif
+	void Z_Construct_UClass_AEnvironmentManager_Statics::NewProp_IsWorldSeedRandom_SetBit(void* Obj)
+	{
+		((AEnvironmentManager*)Obj)->IsWorldSeedRandom = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AEnvironmentManager_Statics::NewProp_IsWorldSeedRandom = { "IsWorldSeedRandom", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AEnvironmentManager), &Z_Construct_UClass_AEnvironmentManager_Statics::NewProp_IsWorldSeedRandom_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AEnvironmentManager_Statics::NewProp_IsWorldSeedRandom_MetaData), Z_Construct_UClass_AEnvironmentManager_Statics::NewProp_IsWorldSeedRandom_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnvironmentManager_Statics::NewProp_WorldSeed_MetaData[] = {
 		{ "Category", "WorldStats" },
+		{ "EditCondition", "IsWorldSeedRandom == false" },
+		{ "EditConditionHides", "" },
 		{ "ModuleRelativePath", "Private/Environment/EnvironmentManager.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The world seed, changing it change how the wolrd is generated" },
@@ -116,6 +137,7 @@ void EmptyLinkFunctionForGeneratedCodeEnvironmentManager() {}
 #endif
 	const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AEnvironmentManager_Statics::NewProp_ChunksSize = { "ChunksSize", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEnvironmentManager, ChunksSize), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AEnvironmentManager_Statics::NewProp_ChunksSize_MetaData), Z_Construct_UClass_AEnvironmentManager_Statics::NewProp_ChunksSize_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AEnvironmentManager_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnvironmentManager_Statics::NewProp_IsWorldSeedRandom,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnvironmentManager_Statics::NewProp_WorldSeed,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnvironmentManager_Statics::NewProp_NoiseFrequency,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnvironmentManager_Statics::NewProp_DrawDistance,
@@ -160,9 +182,9 @@ void EmptyLinkFunctionForGeneratedCodeEnvironmentManager() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_EnvironmentManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AEnvironmentManager, AEnvironmentManager::StaticClass, TEXT("AEnvironmentManager"), &Z_Registration_Info_UClass_AEnvironmentManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnvironmentManager), 3880553918U) },
+		{ Z_Construct_UClass_AEnvironmentManager, AEnvironmentManager::StaticClass, TEXT("AEnvironmentManager"), &Z_Registration_Info_UClass_AEnvironmentManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnvironmentManager), 3503615940U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_EnvironmentManager_h_2768997538(TEXT("/Script/Nimbus_Miner"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_EnvironmentManager_h_938428916(TEXT("/Script/Nimbus_Miner"),
 		Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_EnvironmentManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_EnvironmentManager_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
