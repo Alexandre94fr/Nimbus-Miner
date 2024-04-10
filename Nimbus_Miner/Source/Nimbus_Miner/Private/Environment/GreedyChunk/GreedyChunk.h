@@ -36,8 +36,8 @@ public:
 
 	// Enable the posibility to set the chunk's size to not be like a scare
 
-	UPROPERTY(EditAnywhere, Category = "Chunk")
-	FIntVector Size = FIntVector(1, 1, 1) * 32;
+	UPROPERTY(EditAnywhere, Category = "ChunkStats")
+	FIntVector Size = FIntVector(32, 32, 32);
 
 	void InitGreedyChunk();
 

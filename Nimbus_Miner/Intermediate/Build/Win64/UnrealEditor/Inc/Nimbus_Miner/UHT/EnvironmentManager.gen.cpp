@@ -10,6 +10,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeEnvironmentManager() {}
 // Cross Module References
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FIntVector();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	NIMBUS_MINER_API UClass* Z_Construct_UClass_AEnvironmentManager();
@@ -54,7 +55,7 @@ void EmptyLinkFunctionForGeneratedCodeEnvironmentManager() {}
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_ChunksSize_MetaData[];
 #endif
-		static const UECodeGen_Private::FIntPropertyParams NewProp_ChunksSize;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_ChunksSize;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -111,7 +112,7 @@ void EmptyLinkFunctionForGeneratedCodeEnvironmentManager() {}
 		{ "Category", "WorldStats" },
 		{ "ModuleRelativePath", "Private/Environment/EnvironmentManager.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "The noise frequency" },
+		{ "ToolTip", "The radius of chunks spawned at the start of the game" },
 #endif
 	};
 #endif
@@ -135,7 +136,7 @@ void EmptyLinkFunctionForGeneratedCodeEnvironmentManager() {}
 #endif
 	};
 #endif
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AEnvironmentManager_Statics::NewProp_ChunksSize = { "ChunksSize", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEnvironmentManager, ChunksSize), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AEnvironmentManager_Statics::NewProp_ChunksSize_MetaData), Z_Construct_UClass_AEnvironmentManager_Statics::NewProp_ChunksSize_MetaData) };
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AEnvironmentManager_Statics::NewProp_ChunksSize = { "ChunksSize", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEnvironmentManager, ChunksSize), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AEnvironmentManager_Statics::NewProp_ChunksSize_MetaData), Z_Construct_UClass_AEnvironmentManager_Statics::NewProp_ChunksSize_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AEnvironmentManager_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnvironmentManager_Statics::NewProp_IsWorldSeedRandom,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnvironmentManager_Statics::NewProp_WorldSeed,
@@ -182,9 +183,9 @@ void EmptyLinkFunctionForGeneratedCodeEnvironmentManager() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_EnvironmentManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AEnvironmentManager, AEnvironmentManager::StaticClass, TEXT("AEnvironmentManager"), &Z_Registration_Info_UClass_AEnvironmentManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnvironmentManager), 3503615940U) },
+		{ Z_Construct_UClass_AEnvironmentManager, AEnvironmentManager::StaticClass, TEXT("AEnvironmentManager"), &Z_Registration_Info_UClass_AEnvironmentManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnvironmentManager), 465978604U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_EnvironmentManager_h_938428916(TEXT("/Script/Nimbus_Miner"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_EnvironmentManager_h_459105488(TEXT("/Script/Nimbus_Miner"),
 		Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_EnvironmentManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_EnvironmentManager_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

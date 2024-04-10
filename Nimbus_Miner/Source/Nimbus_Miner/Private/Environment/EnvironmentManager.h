@@ -25,14 +25,14 @@ public:
 	UPROPERTY(EditAnywhere, Category = "WorldStats", meta = (ToolTip = "The noise frequency"))
 	float NoiseFrequency = 0.03f;
 
-	UPROPERTY(EditAnywhere, Category = "WorldStats", meta = (ToolTip = "The noise frequency"))
+	UPROPERTY(EditAnywhere, Category = "WorldStats", meta = (ToolTip = "The radius of chunks spawned at the start of the game"))
 	int DrawDistance = 5;
 
 	UPROPERTY(EditAnywhere, Category = "WorldStats|ChunkStats", meta = (ToolTip = "The world seed, changing it change how the wolrd is generated"))
 	TSubclassOf<AActor> TypeOfChunkLoaded;
 
 	UPROPERTY(EditAnywhere, Category = "WorldStats|ChunkStats", meta = (ToolTip = "The size of the chunk in X, Y, and Z axis, unit in meter"))
-	int ChunksSize = 32;
+	FIntVector ChunksSize = FIntVector(32, 32, 32);
 
 protected:
 

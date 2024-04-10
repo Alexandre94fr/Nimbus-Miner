@@ -78,7 +78,7 @@ void EmptyLinkFunctionForGeneratedCodeGreedyChunk() {}
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGreedyChunk_Statics::NewProp_NoiseFrequency = { "NoiseFrequency", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGreedyChunk, NoiseFrequency), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGreedyChunk_Statics::NewProp_NoiseFrequency_MetaData), Z_Construct_UClass_AGreedyChunk_Statics::NewProp_NoiseFrequency_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGreedyChunk_Statics::NewProp_Size_MetaData[] = {
-		{ "Category", "Chunk" },
+		{ "Category", "ChunkStats" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Enable the posibility to set the chunk's size to not be like a scare\n" },
 #endif
@@ -132,9 +132,9 @@ void EmptyLinkFunctionForGeneratedCodeGreedyChunk() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_GreedyChunk_GreedyChunk_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AGreedyChunk, AGreedyChunk::StaticClass, TEXT("AGreedyChunk"), &Z_Registration_Info_UClass_AGreedyChunk, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGreedyChunk), 725436722U) },
+		{ Z_Construct_UClass_AGreedyChunk, AGreedyChunk::StaticClass, TEXT("AGreedyChunk"), &Z_Registration_Info_UClass_AGreedyChunk, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGreedyChunk), 3927368726U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_GreedyChunk_GreedyChunk_h_2862793904(TEXT("/Script/Nimbus_Miner"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_GreedyChunk_GreedyChunk_h_3600470724(TEXT("/Script/Nimbus_Miner"),
 		Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_GreedyChunk_GreedyChunk_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_GreedyChunk_GreedyChunk_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

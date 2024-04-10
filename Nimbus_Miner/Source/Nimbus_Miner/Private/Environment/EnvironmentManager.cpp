@@ -35,25 +35,35 @@ void AEnvironmentManager::CreateAllStartingChunks()
 	{
 		for (int y = -DrawDistance; y <= DrawDistance; y++)
 		{
-			// The hard coded 100 number is there because Unreal Engine use centimeter has mesure unit, so to have meter we multiply/divide everything by 100
-
-			// We create the chunk and store his adress
-			AActor* newChunk = GetWorld()->SpawnActor<AActor>(TypeOfChunkLoaded, FVector(x * ChunksSize * 100, y * ChunksSize * 100, 0), FRotator::ZeroRotator);
-
-			// We set the parent of the created chunks to the chunk parent (The EnvironmentManager needs a component to have childrens)
-			if (newChunk && this)
+			// Safety
+			if (IsValid(TypeOfChunkLoaded))
 			{
-				newChunk->AttachToActor(this, FAttachmentTransformRules::KeepWorldTransform);
+				// The hard coded 100 number is there because Unreal Engine use centimeter has mesure unit, so to have meter we multiply/divide everything by 100
 
-				// We are getting the chunk's class
-				AGreedyChunk* chunkClass = Cast<AGreedyChunk>(newChunk);
-				if (chunkClass)
+				// We create the chunk and store his adress
+				AActor* newChunk = GetWorld()->SpawnActor<AActor>(TypeOfChunkLoaded, FVector(x * ChunksSize.X * 100, y * ChunksSize.Y * 100, 0), FRotator::ZeroRotator);
+
+				// We set the parent of the created chunks to the chunk parent (The EnvironmentManager needs a component to have childrens)
+				if (newChunk && this)
 				{
-					// Access and change the public variables
-					chunkClass->WorldSeed = WorldSeed;
-					chunkClass->NoiseFrequency = NoiseFrequency;
-					chunkClass->InitGreedyChunk();
+					newChunk->AttachToActor(this, FAttachmentTransformRules::KeepWorldTransform);
+
+					// We are getting the chunk's class
+					AGreedyChunk* chunkClass = Cast<AGreedyChunk>(newChunk);
+					if (chunkClass)
+					{
+						// Access and change the public variables
+						chunkClass->WorldSeed = WorldSeed;
+						chunkClass->NoiseFrequency = NoiseFrequency;
+						chunkClass->Size = ChunksSize;
+						chunkClass->InitGreedyChunk();
+					}
 				}
+			}
+			else
+			{
+				GEngine->AddOnScreenDebugMessage(-1, 25.0f, FColor::Red, FString::Printf(TEXT("TypeOfChunkLoaded is null")), true, FVector2D(2, 2));
+				return;
 			}
 		}
 	}
