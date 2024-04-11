@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "GreedyChunk/GreedyChunk.h"
+
 #include "EnvironmentManager.generated.h"
 
 UCLASS()
@@ -22,17 +24,20 @@ public:
 	UPROPERTY(EditAnywhere, Category = "WorldStats", meta = (ToolTip = "The world seed, changing it change how the wolrd is generated", EditCondition = "IsWorldSeedRandom == false", EditConditionHides))
 	int WorldSeed = 1789;
 
-	UPROPERTY(EditAnywhere, Category = "WorldStats", meta = (ToolTip = "The noise frequency"))
+	UPROPERTY(EditAnywhere, Category = "WorldStats", meta = (ToolTip = "Frequency is used to create noise, which influences the steepness of slopes: the lower the frequency, the gentler the slopes, and the higher the frequency, the steeper the slopes."))
 	float NoiseFrequency = 0.03f;
 
 	UPROPERTY(EditAnywhere, Category = "WorldStats", meta = (ToolTip = "The radius of chunks spawned at the start of the game"))
 	int DrawDistance = 5;
 
 	UPROPERTY(EditAnywhere, Category = "WorldStats|ChunkStats", meta = (ToolTip = "The world seed, changing it change how the wolrd is generated"))
-	TSubclassOf<AActor> TypeOfChunkLoaded;
+	TSubclassOf<AActor> TypeOfChunkLoaded = AGreedyChunk::StaticClass();
 
 	UPROPERTY(EditAnywhere, Category = "WorldStats|ChunkStats", meta = (ToolTip = "The size of the chunk in X, Y, and Z axis, unit in meter"))
 	FIntVector ChunksSize = FIntVector(32, 32, 32);
+
+	UPROPERTY(EditAnywhere, Category = "WorldStats|ChunkStats")
+	UMaterialInterface* Material;
 
 protected:
 

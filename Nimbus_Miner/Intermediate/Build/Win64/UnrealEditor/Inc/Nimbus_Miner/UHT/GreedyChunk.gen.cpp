@@ -11,6 +11,7 @@ void EmptyLinkFunctionForGeneratedCodeGreedyChunk() {}
 // Cross Module References
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FIntVector();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
+	ENGINE_API UClass* Z_Construct_UClass_UMaterialInterface_NoRegister();
 	NIMBUS_MINER_API UClass* Z_Construct_UClass_AGreedyChunk();
 	NIMBUS_MINER_API UClass* Z_Construct_UClass_AGreedyChunk_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_Nimbus_Miner();
@@ -41,6 +42,10 @@ void EmptyLinkFunctionForGeneratedCodeGreedyChunk() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_Size_MetaData[];
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_Size;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Material_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_Material;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -71,7 +76,7 @@ void EmptyLinkFunctionForGeneratedCodeGreedyChunk() {}
 		{ "Category", "ChunkStats" },
 		{ "ModuleRelativePath", "Private/Environment/GreedyChunk/GreedyChunk.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "The noise frequency" },
+		{ "ToolTip", "Frequency is used to create noise, which influences the steepness of slopes: the lower the frequency, the gentler the slopes, and the higher the frequency, the steeper the slopes." },
 #endif
 	};
 #endif
@@ -89,10 +94,18 @@ void EmptyLinkFunctionForGeneratedCodeGreedyChunk() {}
 	};
 #endif
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AGreedyChunk_Statics::NewProp_Size = { "Size", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGreedyChunk, Size), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGreedyChunk_Statics::NewProp_Size_MetaData), Z_Construct_UClass_AGreedyChunk_Statics::NewProp_Size_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGreedyChunk_Statics::NewProp_Material_MetaData[] = {
+		{ "Category", "ChunkStats" },
+		{ "ModuleRelativePath", "Private/Environment/GreedyChunk/GreedyChunk.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGreedyChunk_Statics::NewProp_Material = { "Material", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGreedyChunk, Material), Z_Construct_UClass_UMaterialInterface_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGreedyChunk_Statics::NewProp_Material_MetaData), Z_Construct_UClass_AGreedyChunk_Statics::NewProp_Material_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGreedyChunk_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGreedyChunk_Statics::NewProp_WorldSeed,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGreedyChunk_Statics::NewProp_NoiseFrequency,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGreedyChunk_Statics::NewProp_Size,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGreedyChunk_Statics::NewProp_Material,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AGreedyChunk_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AGreedyChunk>::IsAbstract,
@@ -132,9 +145,9 @@ void EmptyLinkFunctionForGeneratedCodeGreedyChunk() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_GreedyChunk_GreedyChunk_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AGreedyChunk, AGreedyChunk::StaticClass, TEXT("AGreedyChunk"), &Z_Registration_Info_UClass_AGreedyChunk, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGreedyChunk), 3927368726U) },
+		{ Z_Construct_UClass_AGreedyChunk, AGreedyChunk::StaticClass, TEXT("AGreedyChunk"), &Z_Registration_Info_UClass_AGreedyChunk, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGreedyChunk), 800798121U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_GreedyChunk_GreedyChunk_h_3600470724(TEXT("/Script/Nimbus_Miner"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_GreedyChunk_GreedyChunk_h_3891333892(TEXT("/Script/Nimbus_Miner"),
 		Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_GreedyChunk_GreedyChunk_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_GreedyChunk_GreedyChunk_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

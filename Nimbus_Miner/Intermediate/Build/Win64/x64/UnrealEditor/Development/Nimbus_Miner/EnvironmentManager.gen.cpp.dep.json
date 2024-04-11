@@ -7,6 +7,10 @@
         "Includes": [
             "c:\\mes jeux\\unreal\\_github\\nimbus-miner\\nimbus_miner\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\nimbus_miner\\definitions.nimbus_miner.h",
             "c:\\mes jeux\\unreal\\_github\\nimbus-miner\\nimbus_miner\\source\\nimbus_miner\\private\\environment\\environmentmanager.h",
+            "c:\\mes jeux\\unreal\\_github\\nimbus-miner\\nimbus_miner\\source\\nimbus_miner\\private\\environment\\greedychunk\\greedychunk.h",
+            "c:\\mes jeux\\unreal\\_github\\nimbus-miner\\nimbus_miner\\source\\nimbus_miner\\private\\environment\\chunkmeshdata.h",
+            "c:\\mes jeux\\unreal\\_github\\nimbus-miner\\nimbus_miner\\intermediate\\build\\win64\\unrealeditor\\inc\\nimbus_miner\\uht\\chunkmeshdata.generated.h",
+            "c:\\mes jeux\\unreal\\_github\\nimbus-miner\\nimbus_miner\\intermediate\\build\\win64\\unrealeditor\\inc\\nimbus_miner\\uht\\greedychunk.generated.h",
             "c:\\mes jeux\\unreal\\_github\\nimbus-miner\\nimbus_miner\\intermediate\\build\\win64\\unrealeditor\\inc\\nimbus_miner\\uht\\environmentmanager.generated.h"
         ],
         "ImportedModules": [],

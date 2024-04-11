@@ -20,8 +20,6 @@ AGreedyChunk::AGreedyChunk()
 void AGreedyChunk::BeginPlay()
 {
 	Super::BeginPlay();
-
-
 }
 
 void AGreedyChunk::InitGreedyChunk()
@@ -76,20 +74,6 @@ void AGreedyChunk::GenerateBlocks()
 			}
 		}
 	}
-}
-
-void AGreedyChunk::ApplyMesh()
-{
-	_mesh->CreateMeshSection(
-		0,
-		_meshData.Vertices,
-		_meshData.Triangles,
-		_meshData.Normals,
-		_meshData.UV0,
-		TArray<FColor>(),
-		TArray<FProcMeshTangent>(),
-		true
-	);
 }
 
 void AGreedyChunk::GenerateMesh()
@@ -171,7 +155,7 @@ void AGreedyChunk::GenerateMesh()
 
 						for (width = 1; x + width < axis1Limit && CompareMask(mask[maskIteration + width], currentMask); width++)
 						{
-							// TO DO
+
 						}
 
 						int height = 0;
@@ -228,16 +212,40 @@ void AGreedyChunk::GenerateMesh()
 	}
 }
 
+void AGreedyChunk::ApplyMesh()
+{
+	_mesh->SetMaterial(0, Material);
+	_mesh->CreateMeshSection(
+		0,
+		_meshData.Vertices,
+		_meshData.Triangles,
+		_meshData.Normals,
+		_meshData.UV0,
+		_meshData.Colors,
+		TArray<FProcMeshTangent>(),
+		true
+	);
+}
+
 void AGreedyChunk::CreateQuad(FMask mask, FIntVector axisMask, FIntVector faceVertexes1, FIntVector faceVertexes2, FIntVector faceVertexes3, FIntVector faceVertexes4)
 {
 	const FVector quadNormal = FVector(axisMask * mask.Normal);
 
-	// The hard coded 100 number is there because Unreal Engine use centimeter has mesure unit, so to have meter we multiply/divide everything by 100
+	// NOTE : The hard coded 100 number is there because Unreal Engine use centimeter has mesure unit, so to have meter we multiply/divide everything by 100
 
 	_meshData.Vertices.Add(FVector(faceVertexes1) * 100);
 	_meshData.Vertices.Add(FVector(faceVertexes2) * 100);
 	_meshData.Vertices.Add(FVector(faceVertexes3) * 100);
 	_meshData.Vertices.Add(FVector(faceVertexes4) * 100);
+
+	// Adding random color to the face
+	const FColor color = FColor(
+		FMath::RandRange(0, 255),
+		FMath::RandRange(0, 255),
+		FMath::RandRange(0, 255),
+		255
+	);
+	_meshData.Colors.Append({ color, color, color, color });
 
 	_meshData.Triangles.Add(_vertexCount);
 	_meshData.Triangles.Add(_vertexCount + 2 + mask.Normal);

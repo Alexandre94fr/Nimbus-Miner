@@ -85,6 +85,12 @@
     <Filter Include="Source\Nimbus_Miner\Private\Environment">
       <UniqueIdentifier>{3EF173B9-25AC-3839-85A4-FD50457DF4E8}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Nimbus_Miner\Private\Environment\ChunkBase.cpp">
+      <Filter>Source\Nimbus_Miner\Private\Environment</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Nimbus_Miner\Private\Environment\ChunkBase.h">
+      <Filter>Source\Nimbus_Miner\Private\Environment</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Nimbus_Miner\Private\Environment\ChunkMeshData.h">
       <Filter>Source\Nimbus_Miner\Private\Environment</Filter>
     </ClInclude>

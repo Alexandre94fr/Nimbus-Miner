@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\mes jeux\\unreal\\_github\\nimbus-miner\\nimbus_miner\\intermediate\\build\\win64\\unrealeditor\\inc\\nimbus_miner\\uht\\chunkbase.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\mes jeux\\unreal\\_github\\nimbus-miner\\nimbus_miner\\intermediate\\build\\win64\\x64\\nimbus_minereditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\mes jeux\\unreal\\_github\\nimbus-miner\\nimbus_miner\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\nimbus_miner\\definitions.nimbus_miner.h",
+            "c:\\mes jeux\\unreal\\_github\\nimbus-miner\\nimbus_miner\\source\\nimbus_miner\\private\\environment\\chunkbase.h",
+            "c:\\mes jeux\\unreal\\_github\\nimbus-miner\\nimbus_miner\\source\\nimbus_miner\\private\\environment\\chunkmeshdata.h",
+            "c:\\mes jeux\\unreal\\_github\\nimbus-miner\\nimbus_miner\\intermediate\\build\\win64\\unrealeditor\\inc\\nimbus_miner\\uht\\chunkmeshdata.generated.h",
+            "c:\\mes jeux\\unreal\\_github\\nimbus-miner\\nimbus_miner\\intermediate\\build\\win64\\unrealeditor\\inc\\nimbus_miner\\uht\\chunkbase.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

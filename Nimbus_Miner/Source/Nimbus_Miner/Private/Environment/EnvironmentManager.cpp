@@ -31,7 +31,7 @@ void AEnvironmentManager::RandomizeWorldStats()
 void AEnvironmentManager::CreateAllStartingChunks()
 {
 	// Safety first
-	if (IsValid(TypeOfChunkLoaded))
+	if (IsValid(TypeOfChunkLoaded) || !TypeOfChunkLoaded == NULL)
 	{
 		// We spawn all starting chunks 
 		for (int x = -DrawDistance; x <= DrawDistance; x++)
@@ -56,6 +56,7 @@ void AEnvironmentManager::CreateAllStartingChunks()
 						chunkClass->WorldSeed = WorldSeed;
 						chunkClass->NoiseFrequency = NoiseFrequency;
 						chunkClass->Size = ChunksSize;
+						chunkClass->Material = Material;
 						chunkClass->InitGreedyChunk();
 					}
 				}
@@ -64,7 +65,7 @@ void AEnvironmentManager::CreateAllStartingChunks()
 	}
 	else
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 25.0f, FColor::Red, FString::Printf(TEXT("TypeOfChunkLoaded is null")), true, FVector2D(2, 2));
+		GEngine->AddOnScreenDebugMessage(-1, 25.0f, FColor::Red, FString::Printf(TEXT("TypeOfChunkLoaded is null")), true, FVector2D(1.5f, 1.5f));
 		return;
 	}
 }

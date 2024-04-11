@@ -159,6 +159,12 @@
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClInclude Include="..\..\Source\Nimbus_Miner\TP_WeaponComponent.h"/>
+    <ClCompile Include="..\..\Source\Nimbus_Miner\Private\Environment\ChunkBase.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Nimbus_Miner\Private\Environment\ChunkBase.h"/>
     <ClInclude Include="..\..\Source\Nimbus_Miner\Private\Environment\ChunkMeshData.h"/>
     <ClInclude Include="..\..\Source\Nimbus_Miner\Private\Environment\EnvironmentEnums.h"/>
     <ClCompile Include="..\..\Source\Nimbus_Miner\Private\Environment\EnvironmentManager.cpp">

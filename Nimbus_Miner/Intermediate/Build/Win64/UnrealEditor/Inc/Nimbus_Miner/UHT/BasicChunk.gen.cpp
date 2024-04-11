@@ -74,7 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeBasicChunk() {}
 		{ "Category", "ChunkStats" },
 		{ "ModuleRelativePath", "Private/Environment/BasicChunk/BasicChunk.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "The noise frequency" },
+		{ "ToolTip", "Frequency is used to create noise, which influences the steepness of slopes: the lower the frequency, the gentler the slopes, and the higher the frequency, the steeper the slopes." },
 #endif
 	};
 #endif
@@ -143,9 +143,9 @@ void EmptyLinkFunctionForGeneratedCodeBasicChunk() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_BasicChunk_BasicChunk_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ABasicChunk, ABasicChunk::StaticClass, TEXT("ABasicChunk"), &Z_Registration_Info_UClass_ABasicChunk, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABasicChunk), 329537739U) },
+		{ Z_Construct_UClass_ABasicChunk, ABasicChunk::StaticClass, TEXT("ABasicChunk"), &Z_Registration_Info_UClass_ABasicChunk, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABasicChunk), 2122597498U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_BasicChunk_BasicChunk_h_3899306933(TEXT("/Script/Nimbus_Miner"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_BasicChunk_BasicChunk_h_1881850192(TEXT("/Script/Nimbus_Miner"),
 		Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_BasicChunk_BasicChunk_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_BasicChunk_BasicChunk_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

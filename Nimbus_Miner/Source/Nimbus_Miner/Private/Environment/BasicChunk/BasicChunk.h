@@ -25,7 +25,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "ChunkStats", meta = (ToolTip = "The world seed, changing it change how the wolrd is generated"))
 	int WorldSeed = 1789;
 
-	UPROPERTY(EditAnywhere, Category = "ChunkStats", meta = (ToolTip = "The noise frequency"))
+	UPROPERTY(EditAnywhere, Category = "ChunkStats", meta = (ToolTip = "Frequency is used to create noise, which influences the steepness of slopes: the lower the frequency, the gentler the slopes, and the higher the frequency, the steeper the slopes."))
 	float Frequency = 0.03f;
 
 	UPROPERTY(EditAnywhere, Category = "ChunkStats", meta = (ToolTip = "The size of the chunk in X, Y, and Z axis, unit in meter"))
