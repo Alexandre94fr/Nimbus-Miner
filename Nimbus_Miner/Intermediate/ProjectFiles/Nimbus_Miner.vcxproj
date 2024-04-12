@@ -173,6 +173,12 @@
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClInclude Include="..\..\Source\Nimbus_Miner\Private\Environment\EnvironmentManager.h"/>
+    <ClCompile Include="..\..\Source\Nimbus_Miner\Private\Environment\VoxelFunctionLibrary.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Nimbus_Miner\Private\Environment\VoxelFunctionLibrary.h"/>
     <ClCompile Include="..\..\Source\Nimbus_Miner\Private\Environment\BasicChunk\BasicChunk.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>

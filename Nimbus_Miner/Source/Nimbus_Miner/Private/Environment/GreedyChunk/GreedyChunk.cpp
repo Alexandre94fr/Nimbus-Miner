@@ -2,8 +2,8 @@
 
 #include "GreedyChunk.h"
 
-#include "../EnvironmentEnums.h"
 #include "ProceduralMeshComponent.h"
+#include "../EnvironmentEnums.h"
 #include "../ExternalAssets/FastNoiseLite.h"
 
 // Sets default values
@@ -290,4 +290,31 @@ BlockTypes AGreedyChunk::GetBlock(FIntVector index) const
 bool AGreedyChunk::CompareMask(FMask mask1, FMask mask2) const
 {
 	return mask1.BlockType == mask2.BlockType && mask1.Normal == mask2.Normal;
+}
+
+void AGreedyChunk::ModifyBlock(const FIntVector blockPosition, BlockTypes blockType)
+{
+	// If the given position is outside the chunk
+	if (blockPosition.X >= Size.X || blockPosition.Y >= Size.Y || blockPosition.Z >= Size.Z || blockPosition.X < 0 || blockPosition.Y < 0 || blockPosition.Z < 0) return;
+
+	ModifyBlockData(blockPosition, blockType);
+
+	ClearMesh();
+
+	GenerateMesh();
+
+	ApplyMesh();
+}
+
+void AGreedyChunk::ModifyBlockData(const FIntVector blockPosition, BlockTypes blockType)
+{
+	const int index = GetBlockIndex(blockPosition.X, blockPosition.Y, blockPosition.Z);
+
+	_blocks[index] = blockType;
+}
+
+void AGreedyChunk::ClearMesh()
+{
+	_vertexCount = 0;
+	_meshData.Clear();
 }

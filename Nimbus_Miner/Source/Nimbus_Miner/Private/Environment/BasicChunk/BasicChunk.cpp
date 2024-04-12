@@ -1,8 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "BasicChunk.h"
-#include "../EnvironmentEnums.h"
 #include "../ExternalAssets/FastNoiseLite.h"
+#include "../EnvironmentEnums.h"
 #include "ProceduralMeshComponent.h"
 
 // Sets default values

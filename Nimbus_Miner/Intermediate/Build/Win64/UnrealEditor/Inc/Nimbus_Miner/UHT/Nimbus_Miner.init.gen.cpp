@@ -21,13 +21,13 @@ void EmptyLinkFunctionForGeneratedCodeNimbus_Miner_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x02609E8A,
-				0x6A869D30,
+				0x6582D8C5,
+				0xBD9194C9,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_Nimbus_Miner.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_Nimbus_Miner.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Nimbus_Miner(Z_Construct_UPackage__Script_Nimbus_Miner, TEXT("/Script/Nimbus_Miner"), Z_Registration_Info_UPackage__Script_Nimbus_Miner, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x02609E8A, 0x6A869D30));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Nimbus_Miner(Z_Construct_UPackage__Script_Nimbus_Miner, TEXT("/Script/Nimbus_Miner"), Z_Registration_Info_UPackage__Script_Nimbus_Miner, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x6582D8C5, 0xBD9194C9));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

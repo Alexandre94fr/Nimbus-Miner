@@ -103,6 +103,12 @@
     <ClInclude Include="..\..\Source\Nimbus_Miner\Private\Environment\EnvironmentManager.h">
       <Filter>Source\Nimbus_Miner\Private\Environment</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Nimbus_Miner\Private\Environment\VoxelFunctionLibrary.cpp">
+      <Filter>Source\Nimbus_Miner\Private\Environment</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Nimbus_Miner\Private\Environment\VoxelFunctionLibrary.h">
+      <Filter>Source\Nimbus_Miner\Private\Environment</Filter>
+    </ClInclude>
     <Filter Include="Source\Nimbus_Miner\Private\Environment\BasicChunk">
       <UniqueIdentifier>{BD659057-F241-3C5C-BBB6-A0EBD4C69875}</UniqueIdentifier>
     </Filter>

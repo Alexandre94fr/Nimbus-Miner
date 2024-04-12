@@ -9,8 +9,9 @@
 #include "GreedyChunk.generated.h"
 
 // Forward declarations
-enum class BlockTypes;
 class FastNoiseLite;
+enum class Directions : uint8;
+enum class BlockTypes : uint8;
 class UProceduralMeshComponent;
 
 UCLASS()
@@ -45,6 +46,9 @@ public:
 
 	void InitGreedyChunk();
 
+	UFUNCTION(BlueprintCallable, Category = "Chunk")
+	void ModifyBlock(const FIntVector blockPosition, const BlockTypes blockType);
+
 protected:
 
 	// Called when the game starts or when spawned
@@ -73,4 +77,8 @@ private:
 	BlockTypes GetBlock(FIntVector index) const;
 
 	bool CompareMask(FMask mask1, FMask mask2) const;
+
+	void ModifyBlockData(const FIntVector blockPosition, BlockTypes blockType);
+
+	void ClearMesh();
 };

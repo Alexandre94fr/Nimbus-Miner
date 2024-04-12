@@ -8,7 +8,7 @@
 #include "ChunkBase.generated.h"
 
 // Forward declarations
-enum class BlockTypes;
+enum class BlockTypes : uint8;
 class FastNoiseLite;
 class UProceduralMeshComponent;
 

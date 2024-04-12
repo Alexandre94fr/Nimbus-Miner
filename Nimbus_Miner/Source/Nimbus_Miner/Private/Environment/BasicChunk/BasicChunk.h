@@ -7,9 +7,9 @@
 #include "BasicChunk.generated.h"
 
 // Forward declarations
-enum class Directions;
-enum class BlockTypes;
 class FastNoiseLite;
+enum class Directions : uint8;
+enum class BlockTypes : uint8;
 class UProceduralMeshComponent;
 
 UCLASS()
@@ -35,7 +35,7 @@ public:
 	int Scale = 1;
 
 protected:
-
+	
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 

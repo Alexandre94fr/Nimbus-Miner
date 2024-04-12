@@ -1,7 +1,8 @@
 #pragma once
 
 // Represent the block's face direction
-enum class Directions
+UENUM(BlueprintType)
+enum class Directions : uint8
 {
 	Up,
 	Down,
@@ -12,12 +13,12 @@ enum class Directions
 };
 
 // Represent all block's types
-enum class BlockTypes
+UENUM(BlueprintType)
+enum class BlockTypes : uint8
 {
 	Null,
 
 	// -- Transparent blocks -- //
-
 	Air,
 
 	// -- Opaque blocks -- //
