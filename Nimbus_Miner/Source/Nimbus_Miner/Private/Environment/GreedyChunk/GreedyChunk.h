@@ -70,7 +70,7 @@ private:
 
 	void GenerateMesh();
 
-	void CreateQuad(FMask mask, FIntVector axisMask, FIntVector faceVertexes1, FIntVector faceVertexes2, FIntVector faceVertexes3, FIntVector faceVertexes4);
+	void CreateQuad(FMask mask, FIntVector axisMask, int width, int height, FIntVector faceVertexes1, FIntVector faceVertexes2, FIntVector faceVertexes3, FIntVector faceVertexes4);
 
 	int GetBlockIndex(int xPosition, int yPosition, int zPosition) const;
 
@@ -81,4 +81,8 @@ private:
 	void ModifyBlockData(const FIntVector blockPosition, BlockTypes blockType);
 
 	void ClearMesh();
+
+	int GetEnvironmentTextureIndex(BlockTypes blockType, FVector normal) const;
+
+	int GetOresTextureIndex(BlockTypes blockType, FVector normal) const;
 };

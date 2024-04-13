@@ -61,13 +61,54 @@ void AGreedyChunk::GenerateBlocks()
 
 			const int height = FMath::Clamp(FMath::RoundToInt((_noise->GetNoise(xPosition, yPosition) + 1) * Size.Z / 2), 0, Size.Z);
 
-			// All the blocks under and at the height became clouds
+			// We set all block's type by their height (compared to the ground)
 			for (int z = 0; z < height; z++)
 			{
-				_blocks[GetBlockIndex(x, y, z)] = BlockTypes::NormalCloud;
+				// NOTE : We begin by the last (the block more close to the bottom of the map)
+				if (z < height - 30)
+					_blocks[GetBlockIndex(x, y, z)] = BlockTypes::ElectrifiedCloud;		// Ore
+
+				else if (z < height - 29)
+					_blocks[GetBlockIndex(x, y, z)] = BlockTypes::DarkCloud;			// Environment
+
+				else if (z < height - 25)
+					_blocks[GetBlockIndex(x, y, z)] = BlockTypes::VeryDarkCloud;		// Environment
+
+				else if (z < height - 20)
+					_blocks[GetBlockIndex(x, y, z)] = BlockTypes::VeryVeryDarkCloud;	// Environment
+
+				else if (z < height - 17)
+					_blocks[GetBlockIndex(x, y, z)] = BlockTypes::VeryDarkCloud;		// Environment
+
+				else if (z < height - 16)
+					_blocks[GetBlockIndex(x, y, z)] = BlockTypes::DarkCloud;			// Environment
+
+				else if (z < height - 15)
+					_blocks[GetBlockIndex(x, y, z)] = BlockTypes::NormalCloud;			// Environment
+
+				else if (z == height - 15)
+					_blocks[GetBlockIndex(x, y, z)] = BlockTypes::HardCloud;			// Ore
+
+				else if (z == height - 14)
+					_blocks[GetBlockIndex(x, y, z)] = BlockTypes::NormalCloud;			// Environment
+
+				else if (z < height - 10)
+					_blocks[GetBlockIndex(x, y, z)] = BlockTypes::VeryVeryDarkCloud;	// Environment
+
+				else if (z < height - 7)
+					_blocks[GetBlockIndex(x, y, z)] = BlockTypes::VeryDarkCloud;		// Environment
+
+				else if (z < height - 4)
+					_blocks[GetBlockIndex(x, y, z)] = BlockTypes::DarkCloud;			// Environment
+
+				else if (z < height - 1)
+					_blocks[GetBlockIndex(x, y, z)] = BlockTypes::NormalCloud;			// Environment
+
+				else if (z == height - 1)
+					_blocks[GetBlockIndex(x, y, z)] = BlockTypes::LightCloud;			// Environment
 			}
 
-			// Otherwise them became air
+			// Otherwise them became air (everything that's higher than [height] become Air)
 			for (int z = height; z < Size.Z; z++)
 			{
 				_blocks[GetBlockIndex(x, y, z)] = BlockTypes::Air;
@@ -178,7 +219,10 @@ void AGreedyChunk::GenerateMesh()
 						deltaAxis2[axis2] = height;
 
 						CreateQuad(
-							currentMask, axisMask,
+							currentMask,
+							axisMask,
+							width,
+							height,
 							chunkItr,
 							chunkItr + deltaAxis1,
 							chunkItr + deltaAxis2,
@@ -227,42 +271,70 @@ void AGreedyChunk::ApplyMesh()
 	);
 }
 
-void AGreedyChunk::CreateQuad(FMask mask, FIntVector axisMask, FIntVector faceVertexes1, FIntVector faceVertexes2, FIntVector faceVertexes3, FIntVector faceVertexes4)
+void AGreedyChunk::CreateQuad(
+	FMask mask,
+	FIntVector axisMask,
+	int width,
+	int height,
+	FIntVector faceVertexes1,
+	FIntVector faceVertexes2,
+	FIntVector faceVertexes3,
+	FIntVector faceVertexes4)
 {
 	const FVector quadNormal = FVector(axisMask * mask.Normal);
+	const FColor color = FColor(0, 0, 0, GetEnvironmentTextureIndex(mask.BlockType, quadNormal));
 
 	// NOTE : The hard coded 100 number is there because Unreal Engine use centimeter has mesure unit, so to have meter we multiply/divide everything by 100
 
-	_meshData.Vertices.Add(FVector(faceVertexes1) * 100);
-	_meshData.Vertices.Add(FVector(faceVertexes2) * 100);
-	_meshData.Vertices.Add(FVector(faceVertexes3) * 100);
-	_meshData.Vertices.Add(FVector(faceVertexes4) * 100);
+	_meshData.Vertices.Append({
+		FVector(faceVertexes1) * 100,
+		FVector(faceVertexes2) * 100,
+		FVector(faceVertexes3) * 100,
+		FVector(faceVertexes4) * 100
+	});
 
-	// Adding random color to the face
-	const FColor color = FColor(
-		FMath::RandRange(0, 255),
-		FMath::RandRange(0, 255),
-		FMath::RandRange(0, 255),
-		255
-	);
-	_meshData.Colors.Append({ color, color, color, color });
+	_meshData.Triangles.Append({
+		_vertexCount,
+		_vertexCount + 2 + mask.Normal,
+		_vertexCount + 2 - mask.Normal,
+		_vertexCount + 3,
+		_vertexCount + 1 - mask.Normal,
+		_vertexCount + 1 + mask.Normal
+	});
 
-	_meshData.Triangles.Add(_vertexCount);
-	_meshData.Triangles.Add(_vertexCount + 2 + mask.Normal);
-	_meshData.Triangles.Add(_vertexCount + 2 - mask.Normal);
-	_meshData.Triangles.Add(_vertexCount + 3);
-	_meshData.Triangles.Add(_vertexCount + 1 - mask.Normal);
-	_meshData.Triangles.Add(_vertexCount + 1 + mask.Normal);
+	_meshData.Normals.Append({
+		quadNormal,
+		quadNormal,
+		quadNormal,
+		quadNormal
+	});
 
-	_meshData.UV0.Add(FVector2D(0, 0));
-	_meshData.UV0.Add(FVector2D(0, 1));
-	_meshData.UV0.Add(FVector2D(1, 0));
-	_meshData.UV0.Add(FVector2D(1, 1));
+	// Adding sprite to the face
+	_meshData.Colors.Append({
+		color,
+		color,
+		color,
+		color
+	});
 
-	_meshData.Normals.Add(quadNormal);
-	_meshData.Normals.Add(quadNormal);
-	_meshData.Normals.Add(quadNormal);
-	_meshData.Normals.Add(quadNormal);
+	if (quadNormal.X == 1 || quadNormal.X == -1)
+	{
+		_meshData.UV0.Append({
+			FVector2D(width, height),
+			FVector2D(0, height),
+			FVector2D(width, 0),
+			FVector2D(0, 0),
+		});
+	}
+	else
+	{
+		_meshData.UV0.Append({
+			FVector2D(height, width),
+			FVector2D(height, 0),
+			FVector2D(0, width),
+			FVector2D(0, 0),
+		});
+	}
 
 	_vertexCount += 4;
 }
@@ -317,4 +389,39 @@ void AGreedyChunk::ClearMesh()
 {
 	_vertexCount = 0;
 	_meshData.Clear();
+}
+
+int AGreedyChunk::GetEnvironmentTextureIndex(BlockTypes blockType, FVector normal) const
+{
+	switch (blockType)
+	{
+	// Environment
+	case BlockTypes::LightCloud:
+
+		if (normal == FVector::DownVector) return 1;
+		return 0;
+
+	case BlockTypes::NormalCloud:
+		return 1;
+
+	case BlockTypes::DarkCloud:
+		return 2;
+
+	case BlockTypes::VeryDarkCloud:
+		return 3;
+
+	case BlockTypes::VeryVeryDarkCloud:
+		return 4;
+
+	// Ores
+	case BlockTypes::HardCloud:
+		return 5;
+
+	case BlockTypes::ElectrifiedCloud:
+		return 6;
+
+	default:
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, FString::Printf(TEXT("ERROR ! The block's type given [%s] in not in the switch"), blockType));
+		return 255;
+	}
 }

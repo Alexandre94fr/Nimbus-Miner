@@ -97,7 +97,7 @@ void EmptyLinkFunctionForGeneratedCodeEnvironmentManager() {}
 		{ "EditConditionHides", "" },
 		{ "ModuleRelativePath", "Private/Environment/EnvironmentManager.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "The world seed, changing it change how the wolrd is generated" },
+		{ "ToolTip", "The world seed, changing it change how the world is generated" },
 #endif
 	};
 #endif
@@ -127,7 +127,7 @@ void EmptyLinkFunctionForGeneratedCodeEnvironmentManager() {}
 		{ "Category", "WorldStats|ChunkStats" },
 		{ "ModuleRelativePath", "Private/Environment/EnvironmentManager.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "The world seed, changing it change how the wolrd is generated" },
+		{ "ToolTip", "The type of chunks generated (WARNING : If you change it by another chunk type, it will not works, due to the lack of time in development)" },
 #endif
 	};
 #endif
@@ -196,9 +196,9 @@ void EmptyLinkFunctionForGeneratedCodeEnvironmentManager() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_EnvironmentManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AEnvironmentManager, AEnvironmentManager::StaticClass, TEXT("AEnvironmentManager"), &Z_Registration_Info_UClass_AEnvironmentManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnvironmentManager), 372566239U) },
+		{ Z_Construct_UClass_AEnvironmentManager, AEnvironmentManager::StaticClass, TEXT("AEnvironmentManager"), &Z_Registration_Info_UClass_AEnvironmentManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnvironmentManager), 2213044538U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_EnvironmentManager_h_2253926143(TEXT("/Script/Nimbus_Miner"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_EnvironmentManager_h_206444758(TEXT("/Script/Nimbus_Miner"),
 		Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_EnvironmentManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Mes_jeux_Unreal__GitHub_Nimbus_Miner_Nimbus_Miner_Source_Nimbus_Miner_Private_Environment_EnvironmentManager_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
